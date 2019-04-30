@@ -19,11 +19,11 @@ import tarfile
 import numpy
 from six.moves import urllib
 import tensorflow as tf
+import exline
 
 INCEPTION_TF_GRAPH = 'http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz'
 YT8M_PCA_MAT = 'http://data.yt8m.org/yt8m_pca.tgz'
-MODEL_DIR = os.path.join(os.getenv('HOME'), 'yt8m')
-
+MODEL_DIR  = os.path.join(os.path.dirname(exline.__path__._path[0]), 'third_party/youtube-bm')
 
 class YouTube8MFeatureExtractor(object):
   """Extracts YouTube8M features for RGB frames.
